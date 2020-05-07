@@ -1,0 +1,125 @@
+[*split | personal_account*]
+<div class="containerThree">
+	<div class="registrationСontent">
+		<div class="shadowContainer">
+			<div class="headerConteiner headerRegistration">
+				<p class="title">[*data | title*]</p>
+			</div>
+			<div class="boxInrConteiner">
+				<div class="row" align="center">
+					<div class="boxInput boxAvatarReg">
+						<div class="addFileRegistration imgPersonalAccount">
+							<div class="loader" id="loaderImg"></div>
+							<label class="label">
+								<input id="imgInLod" type="file">
+								<img class="newImg" id="newImg" src="[*url | ADDRESS*]/downloads/images/[*img*]" style="display:block;">
+							</label>
+						</div>
+						<p class="imgTitle">[*lang | error_img*]</p>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_login*]</div>
+							<input type="text" id="login" class="inputInConteiner" placeholder="[*lang | placeholder_login*]" readonly value="[*login*]">
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_password*]</div>
+							<input type="password" id="password" class="inputInConteiner" placeholder="[*lang | placeholder_password*]" readonly value="[*password*]">
+						</div>
+					</div>
+				</div>
+				<div class="row" align="center">
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_surname*]</div>
+							<input type="text" id="surname" class="inputInConteiner" placeholder="[*lang | placeholder_surname*]" readonly value="[*surname*]">
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_name*]</div>
+							<input type="text" id="name" class="inputInConteiner" placeholder="[*lang | placeholder_name*]" readonly value="[*name*]">
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_bithday*]</div>
+							<input type="text" id="bithday" class="inputInConteiner maskBirthday" placeholder="[*lang | placeholder_bithday*]" readonly value="[*bithday*]">
+						</div>
+					</div>
+				</div>
+				<div class="row" align="center">
+					<div class="boxInput">
+						<div class="formGroup" id="genderForm">
+							<div style="margin-bottom:5px;">[*lang | label_gender*]</div>
+							<input type="text" id="gender" class="inputInConteiner" placeholder="[*lang | placeholder_gender*]" readonly="readonly" value="[*gender*]">
+							<div class="selectPointList" id="genderList">
+								<div class="pointStyleList optGenderList" valueId="M">[*lang | list_male*]</div>
+								<div class="pointStyleList optGenderList" valueId="F">[*lang | list_female*]</div>
+							</div>
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_phone*]</div>
+							<input type="text" id="phone" class="inputInConteiner maskPhone" placeholder="[*lang | placeholder_phone*]" readonly value="[*phone*]">
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_mail*]</div>
+							<input type="text" id="mail" class="inputInConteiner" placeholder="[*lang | placeholder_mail*]" readonly value="[*mail*]">
+						</div>
+					</div>
+				</div>
+				<div class="row" align="right">
+					<div class="boxInput" align="right">
+						<button type="button" class="btnInConteinerGray" onClick="exitAccount(this);">[*lang | exit_button*]</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$("#imgInLod").change(function() {
+		proccessLodImg(this, 'lk');
+	});
+	function messageLabelPersonalAccount(code) {
+		switch(code){
+			case 1:
+				var text = "[*lang | error_img*]";
+				break;
+			case 2:
+				var text = "[*lang | error_missing_img*]";
+				break;
+			case 3:
+				var text = "[*lang | error_access*]";
+				break;
+			case 4:
+				var text = "[*lang | error_save*]";
+				break;
+			default:
+				var text = "false";
+				break;
+		}
+		
+		if(text != "false"){
+			$("#systemMessage").html('<div class="alertTop alertError"><strong>[*lang | error_title*]</strong> '+text+' <button type="button" class="close"><span>&times;</span></button></div>');
+			setTimeout(function(){
+				$(".alertTop").fadeOut();
+			}, 5000);
+			closeAlert();
+		}
+		$("#loaderImg").css("display", "none");
+	}
+</script>
+[*/split*]
+
+[*split | logout*]
+<script type="text/javascript">
+	document.location.href = "[*url | ADDRESS*]/";
+</script>
+[*/split*]

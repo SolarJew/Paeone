@@ -1,0 +1,47 @@
+[*split | authorization*]
+<div class="boxInput downMenu">
+	<div class="title" onclick="openMenu();">[*lang | title*]</div>
+	<div class="containerDownMenu" id="containerDownMenu">
+		<form onsubmit="Authorization(this);return false">
+			<div class="formGroup">
+				<div style="margin-bottom:5px;">[*lang | label_login*]</div>
+				<input type="text" id="login" class="inputInConteiner" placeholder="[*lang | placeholder_login*]">
+			</div>
+			<div class="formGroup">
+				<div style="margin-bottom:5px;">[*lang | label_password*]</div>
+				<input type="password" id="password" class="inputInConteiner" placeholder="[*lang | placeholder_password*]">
+				<a class="recoveryPass" href="[*url | ADDRESS*]/password_recovery[*url | TYPE*]">[*lang | password_recovery*]</a>
+			</div>
+			<button type="submit" class="btnInConteiner">[*lang | log_in_button*]</button>
+			<div class="btnRegistration"><a href="[*url | ADDRESS*]/registration[*url | TYPE*]">[*lang | add_account*]</a></div>
+		</form>
+	</div>
+</div>
+[*/split*]
+
+[*split | user*]
+<div class="boxInput downMenu">
+	<div class="title"><a href="[*url | ADDRESS*]/personal_account[*url | TYPE*]">[*lang | lk*]</a></div>
+</div>
+[*/split*]
+
+[*split | error_answer*]
+<script type="text/javascript">
+	$("#systemMessage").html('[*func | message*]');
+		setTimeout(function(){
+			$(".alertTop").fadeOut();
+		}, 3000);
+	$("#loader").css("display","none");
+	closeAlert();
+</script>
+[*/split*]
+
+[*split | error_mess*]
+<div class="alertTop alertError"><strong>[*lang | error_title*]</strong> [*func | error_text*] <button type="button" class="close"><span>&times;</span></button></div>
+[*/split*]
+
+[*split | posit_answer*]
+<script type="text/javascript">
+	document.location.href = "[*url | ADDRESS*]/personal_account[*url | TYPE*]";
+</script>
+[*/split*]

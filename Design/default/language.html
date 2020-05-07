@@ -1,0 +1,18 @@
+[*split | language*]
+<div class="boxInput" style="width:38px;padding:0px;display:inline-block;">
+	<div class="inputGroupAddon" id="langue">
+		<i class="flag [*func | alpha_two*]"></i>
+	</div>
+	<div class="selectPointList langueList" id="langueList">
+		[*func | list_language*]
+	</div>
+</div>
+[*/split*]
+
+[*split | language_elem*]
+<a href="[*func | url*]">
+	<div class="pointStyleList optLangList">
+		<i class="flagInList [*func | alpha_two*]"></i>[*func | name_lang*]
+	</div>
+</a>
+[*/split*]

@@ -1,0 +1,94 @@
+[Content]
+copyright				= "Все права защищены";
+
+[Authorization]
+title					= "Вход";
+label_login				= "Логин";
+placeholder_login		= "Введите логин";
+label_password			= "Пароль";
+placeholder_password	= "Введите пароль";
+password_recovery		= "Восстановление пароля";
+log_in_button			= "Войти";
+error_title				= "Ошибка!";
+error_login_pass		= "Неверный логин и/или пароль.";
+error_params			= "Неверный набор параметров.";
+add_account				= "Регистрация";
+lk						= "Личный кабинет";
+
+[Personal_account]
+label_login				= "Логин";
+placeholder_login		= "Введите логин";
+label_password			= "Пароль";
+placeholder_password	= "Введите пароль";
+label_surname			= "Фамилия";
+placeholder_surname		= "Введите фамилию";
+label_name				= "Имя";
+placeholder_name		= "Введите имя";
+label_bithday			= "Дата рождения";
+placeholder_bithday		= "чч.мм.гггг";
+label_gender			= "Пол";
+placeholder_gender		= "Выберите из списка";
+list_male				= "Мужской";
+list_female				= "Женский";
+label_phone				= "Телефон";
+placeholder_phone		= "+7(___)_______";
+label_mail				= "E-mail";
+placeholder_mail		= "test@local.com";
+exit_button				= "Выйти";
+error_title				= "Ошибка!";
+error_img				= "Допустимый размер картинки 30кб. Формат 200x200, png, jpg, gif";
+error_missing_img		= "Изображение отсутствует.";
+error_access			= "Ошибка доступа.";
+error_save				= "Ошибка при сохранении.";
+
+[Registration]
+label_img				= "Добавить файл";
+label_login				= "Логин";
+placeholder_login		= "Введите логин";
+label_password			= "Пароль";
+placeholder_password	= "Введите пароль";
+label_password_t		= "Повторите пароль";
+placeholder_password_t	= "Повторите пароль";
+label_surname			= "Фамилия";
+placeholder_surname		= "Введите фамилию";
+label_name				= "Имя";
+placeholder_name		= "Введите имя";
+label_bithday			= "Дата рождения";
+placeholder_bithday		= "чч.мм.гггг";
+label_gender			= "Пол";
+placeholder_gender		= "Выберите из списка";
+list_male				= "Мужской";
+list_female				= "Женский";
+label_phone				= "Телефон";
+placeholder_phone		= "+7(___)_______";
+label_mail				= "E-mail";
+placeholder_mail		= "test@local.com";
+button_run				= "Зарегистрироваться";
+button_cancel			= "Отменить";
+error_params			= "Неверный набор параметров.";
+error_isset_user_mail	= "Пользователь с такой почтой уже существует.";
+error_isset_user_login	= "Пользователь с таким логином уже существует.";
+error_registering		= "Ошибка при регистрации. Повторите попытку.";
+error_title				= "Ошибка!";
+error_mail				= "Вы указали некорректный e-mail.";
+error_pass				= "Подтверждение пароля не совпадает с паролем.";
+error_input				= "Допустимые символы для ввода";
+error_length_pass		= "Пароль должен быть не менее 5 символов.";
+error_date			 	= "Допустимый формат даты чч.мм.гггг";
+error_gender			= "Допустимый формат пола M/F";
+error_img				= "Допустимый размер картинки 30кб. Формат 200x200, png, jpg, gif";
+
+[Password_recovery]
+label_mail				= "E-mail";
+label_placeholder		= "Введите Ваш e-mail";
+restore_button			= "Отправить";
+error_title				= "Ошибка!";
+error_mail				= "Вы указали некорректный e-mail.";
+error_params			= "Неверный набор параметров.";
+error_user				= "Пользователь не найден.";
+success_title			= "Готово!";
+success					= "Письмо с дальнейшей инструкцией отправлено на указанный Вами e-mail.";
+error_send				= "При отправке письма произошла ошибка. Повторите попытку.";
+send_title				= "Сброс пароля";
+send_text				= "Новый пароль для доступа в систему - ";
+send_greeting			= "Здравствуйте,";

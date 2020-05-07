@@ -1,0 +1,94 @@
+[Content]
+copyright				= "All rights reserved";
+
+[Authorization]
+title					= "Log in";
+label_login				= "Login";
+placeholder_login		= "Enter the login";
+label_password			= "Password";
+placeholder_password	= "Enter the password";
+password_recovery		= "Password recovery";
+log_in_button			= "Log in";
+error_title				= "Error!";
+error_login_pass		= "Invalid username and / or password.";
+error_params			= "Invalid set of parameters.";
+add_account				= "Create an Account";
+lk						= "Personal account";
+
+[Personal_account]
+label_login				= "Login";
+placeholder_login		= "Enter the login";
+label_password			= "Password";
+placeholder_password	= "Enter the password";
+label_surname			= "Surname";
+placeholder_surname		= "Enter Your last name";
+label_name				= "Name";
+placeholder_name		= "Enter your name";
+label_bithday			= "Birth date";
+placeholder_bithday		= "HH.MM.YYYY";
+label_gender			= "Gender";
+placeholder_gender		= "Select from the list";
+list_male				= "Male";
+list_female				= "Female";
+label_phone				= "Phone";
+placeholder_phone		= "+7(___)_______";
+label_mail				= "E-mail";
+placeholder_mail		= "test@local.com";
+exit_button				= "Log out";
+error_title				= "Error!";
+error_img				= "The allowed image size is 30kb. Format 200x200, png, jpg, gif";
+error_missing_img		= "The image is missing.";
+error_access			= "Access error.";
+error_save				= "Error when saving.";
+
+[Registration]
+label_img				= "Add a file";
+label_login				= "Login";
+placeholder_login		= "Enter the login";
+label_password			= "Password";
+placeholder_password	= "Enter the password";
+label_password_t		= "Repeat password";
+placeholder_password_t	= "Repeat password";
+label_surname			= "Surname";
+placeholder_surname		= "Enter the surname";
+label_name				= "Name";
+placeholder_name		= "Enter the name";
+label_bithday			= "Birthday";
+placeholder_bithday		= "HH.MM.YYYY";
+label_gender			= "Gender";
+placeholder_gender		= "Select from the list";
+list_male				= "Male";
+list_female				= "Female";
+label_phone				= "Phone";
+placeholder_phone		= "+7(___)_______";
+label_mail				= "E-mail";
+placeholder_mail		= "test@local.com";
+button_run				= "Register";
+button_cancel			= "Cancel";
+error_params			= "Invalid set of parameters.";
+error_isset_user_mail	= "A user with this type of email already exists.";
+error_isset_user_login	= "A user with this login already exists.";
+error_registering		= "Error during registration. Try again.";
+error_title				= "Error!";
+error_mail				= "You entered an incorrect e-mail.";
+error_pass				= "Password confirmation does not match the password.";
+error_input				= "Acceptable characters to enter";
+error_length_pass		= "The password must be at least 5 characters long.";
+error_date			 	= "Acceptable date format HH.MM.YYYY";
+error_gender			= "Acceptable format gender M/F";
+error_img				= "The allowed image size is 30kb. Format 200x200, png, jpg, gif";
+
+[Password_recovery]
+label_mail				= "E-mail";
+label_placeholder		= "Enter your email address";
+restore_button			= "Send";
+error_title				= "Error!";
+error_mail				= "You entered an incorrect e-mail.";
+error_params			= "Invalid set of parameters.";
+error_user				= "The user is not found.";
+success_title			= "Success!";
+success					= "An email with further instructions has been sent to the email address you specified.";
+error_send				= "An error occurred when sending the email. Try again.";
+send_title				= "Reset password";
+send_text				= "New password for accessing the system -";
+send_greeting			= "Hello,";

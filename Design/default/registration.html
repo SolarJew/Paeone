@@ -1,0 +1,148 @@
+[*split | registration*]
+<div class="containerThree">
+	<div class="registrationСontent">
+		<div class="shadowContainer">
+			<div class="headerConteiner headerRegistration">
+				<p class="title">[*data | title*]</p>
+			</div>
+			<div class="boxInrConteiner">
+				<div class="row" align="center">
+					<div class="boxInput boxAvatarReg">
+						<div class="addFileRegistration">
+							<label class="label">
+								<span class="title">[*lang | label_img*]</span>
+								<input id="imgInLod" type="file">
+								<img class="newImg" id="newImg" src="">
+							</label>
+						</div>
+						<p class="imgTitle">[*lang | error_img*]</p>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_login*]</div>
+							<input type="text" id="loginR" class="inputInConteiner" placeholder="[*lang | placeholder_login*]">
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_password*]</div>
+							<input type="password" id="passwordR" class="inputInConteiner" placeholder="[*lang | placeholder_password*]">
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_password_t*]</div>
+							<input type="password" id="password_t" class="inputInConteiner" placeholder="[*lang | placeholder_password_t*]">
+						</div>
+					</div>
+				</div>
+				<div class="row" align="center">
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_surname*]</div>
+							<input type="text" id="surname" class="inputInConteiner" placeholder="[*lang | placeholder_surname*]">
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_name*]</div>
+							<input type="text" id="name" class="inputInConteiner" placeholder="[*lang | placeholder_name*]">
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_bithday*]</div>
+							<input type="text" id="bithday" class="inputInConteiner mask" typeMask="data" placeholder="[*lang | placeholder_bithday*]">
+						</div>
+					</div>
+				</div>
+				<div class="row" align="center">
+					<div class="boxInput">
+						<div class="formGroup" id="genderForm">
+							<div style="margin-bottom:5px;">[*lang | label_gender*]</div>
+							<input type="text" id="gender" valueId="" class="inputInConteiner" placeholder="[*lang | placeholder_gender*]" readonly="readonly">
+							<div class="selectPointList" id="genderList">
+								<div class="pointStyleList optGenderList" valueId="M">[*lang | list_male*]</div>
+								<div class="pointStyleList optGenderList" valueId="F">[*lang | list_female*]</div>
+							</div>
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_phone*]</div>
+							<input type="text" id="phone" class="inputInConteiner mask" typeMask="phone" placeholder="[*lang | placeholder_phone*]">
+						</div>
+					</div>
+					<div class="boxInput">
+						<div class="formGroup">
+							<div style="margin-bottom:5px;">[*lang | label_mail*]</div>
+							<input type="text" id="mail" class="inputInConteiner" placeholder="[*lang | placeholder_mail*]">
+						</div>
+					</div>
+				</div>
+				<div class="row" align="right" style="display:block;">
+					<div class="boxInput">
+						<button type="button" onClick="Registration();" class="btnInConteiner">[*lang | button_run*]</button>
+						<a href="[*url | ADDRESS*]/">
+							<button type="button" class="btnInConteinerGray">[*lang | button_cancel*]</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	openGenderList();
+	focusInputMask();
+	$("#imgInLod").change(function() {
+		proccessLodImg(this);
+	});
+	function messageLabelRegistration(code, dopText) {
+		if(dopText == undefined){dopText = '';}
+		switch(code){
+			case 1:
+				var text = "[*lang | error_mail*] "+dopText;
+				break;
+			case 2:
+				var text = "[*lang | error_pass*] "+dopText;
+				break;
+			case 3:
+				var text = "[*lang | error_input*] "+dopText;
+				break;
+			case 5:
+				var text = "[*lang | error_img*] "+dopText;
+				break;
+			case 6:
+				var text = "[*lang | error_length_pass*] [*lang | error_input*] "+dopText;
+				break;
+		}
+		$("#systemMessage").html('<div class="alertTop alertError"><strong>[*lang | error_title*]</strong> '+text+' <button type="button" class="close"><span>&times;</span></button></div>');
+		setTimeout(function(){
+			$(".alertTop").fadeOut();
+		}, 5000);
+		closeAlert();
+	}
+</script>
+[*/split*]
+
+[*split | error_answer*]
+<script type="text/javascript">
+	$("#systemMessage").html('[*func | message*]');
+	setTimeout(function(){
+		$(".alertTop").fadeOut();
+	}, 3000);
+	$("#loader").css("display","none");
+	closeAlert();
+</script>
+[*/split*]
+
+[*split | error_mess*]
+<div class="alertTop alertError"><strong>[*lang | error_title*]</strong> [*func | error_text*] <button type="button" class="close"><span>&times;</span></button></div>
+[*/split*]
+
+[*split | posit_answer*]
+<script type="text/javascript">
+	document.location.href = "[*url | ADDRESS*]/personal_account[*url | TYPE*]";
+</script>
+[*/split*]
